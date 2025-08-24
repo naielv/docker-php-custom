@@ -4,3 +4,5 @@ RUN apt-get update \
     && apt-get install -y openssh-client imagemagick libjpeg62-turbo-dev libpng-dev \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
+
+ADD local.ini $PHP_INI_DIR/conf.d/local.ini
